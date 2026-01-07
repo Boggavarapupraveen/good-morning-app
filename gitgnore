@@ -1,7 +1,0 @@
-node_modules/
-build/
-.env
-android/.gradle/
-ios/Pods/
-.flutter-plugins
-.flutter-plugins-dependencies
