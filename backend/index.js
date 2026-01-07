@@ -10,10 +10,16 @@ app.use(bodyParser.json());
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
-  database: "good_morning unstop_db",
+  database: "postgres",
   password: "praveen",
   port: 5432,
 });
+
+pool.query(`CREATE TABLE IF NOT EXISTS users (
+  name TEXT,
+  phone TEXT,
+  email TEXT
+)`);
 
 app.post("/api/users", async (req, res) => {
   const { name, phone, email } = req.body;
